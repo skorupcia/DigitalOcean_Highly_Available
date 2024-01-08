@@ -25,7 +25,7 @@ Centos: centos-7-x64
 
 -- Droplet Delete --
 
-If you would like to delete droplets, simply switch state of "Probision Digitalocean droplest" from PRESENT to ABSENT and run playbook.
+   If you would like to delete droplets, simply switch state of "Probision Digitalocean droplest" from PRESENT to ABSENT and run playbook.
 
 -- TroubleShooting --
 
@@ -35,6 +35,6 @@ If you would like to delete droplets, simply switch state of "Probision Digitalo
 
 -- Links -- 
 
-https://github.com/geerlingguy/ansible-for-devops/tree/master/lamp-infrastructure
+   https://github.com/geerlingguy/ansible-for-devops/tree/master/lamp-infrastructure
 
-2nd edition of Ansible for DevOps Jeff Geerling
+   2nd edition of Ansible for DevOps Jeff Geerling
