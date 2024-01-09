@@ -3,6 +3,10 @@
   connection: local
 
   vars:
+    # connection vars 
+    u_token: YOUR_API_TOKEN
+    u_ssh: YOUR_SSH
+    # Droplets vars
     droplets:
       - { name: a4d.lamp.varnish, group: "lamp_varnish" }
       - { name: a4d.lamp.www.1, group: "lamp_www" }
@@ -10,8 +14,6 @@
       - { name: a4d.lamp.db.1, group: "lamp_db" }
       - { name: a4d.lamp.db.2, group: "lamp_db" }
       - { name: a4d.lamp.memcached, group: "lamp_memcached" }
-    u_token: YOUR_U_TOKEN
-    u_ssh: YOUR_SSH
 
   tasks:
     - name: Provision DigitalOcean droplets.
@@ -23,29 +25,18 @@
         size: "{{ item.size | default('s-1vcpu-512mb-10gb') }}"
         image: "{{ item.image | default('centos-7-x64') }}"
         region: "{{ item.region | default('fra1') }}"
+        # Customize this default for your account.
         ssh_keys:
           - "{{ u_ssh }}"
         unique_name: yes
       register: created_droplets
       with_items: "{{ droplets }}"
 
-    - name: Add DigitalOcean hosts to inventory groups.
-      add_host:
-        name: "{{ item.1.data.ip_address }}"
-        groups: "do,{{ droplets[item.0].group }},{{ item.1.data.droplet.name }}"
-        # You can dynamically add inventory variables per-host.
-        ansible_user: root
-        mysql_replication_role: >-
-          {{ 'master' if (item.1.data.droplet.name == 'a4d.lamp.db.1')
-          else 'slave' }}
-        mysql_server_id: "{{ item.0 }}"
-      when: item.1.data is defined
-      with_indexed_items: "{{ created_droplets.results }}"
-
 - hosts: do
   remote_user: root
   gather_facts: false
 
   tasks:
-    - name: Wait for hosts to become reachable.
-      wait_for_connection:
+    - name: Debug information
+      debug:
+        var: droplets_response
