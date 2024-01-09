@@ -46,7 +46,7 @@ Compared to Geerlingguy files i have decided to create a script that writes ip's
 
 -- TroubleShooting --
 
-1. MACOS - INSTALL CERTIFICATES IF YOUR Geerlingguy roles end up with certificate error:
+1. MacOS - INSTALL CERTIFICATES if your Geerlingguy roles end up with certificate error:
    
     Unknown error when attempting to call Galaxy at 'https://galaxy.ansible.com/api/': <urlopen error [SSL:CERTIFICATE_VERIFY_FAILED]
 
