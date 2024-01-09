@@ -17,7 +17,7 @@
             host: "{{ groups['lamp_www'][1] }}"
             password: secret
             priv: "*.*:SELECT"
-        mysql_replication_master: "{{ groups['a4d.lamp.db.1'][0] }}"
+        mysql_replication_master: "{{ groups['lamp_db'][0] }}"
 
   roles:
     - geerlingguy.firewall
