@@ -39,6 +39,10 @@ Compared to Geerlingguy files i have decided to create a script that writes ip's
 
       ansible-playbook -i hosts.ini provision.yml
 
+5. Check if infrastructure is working simply connecting to varnish ip server:
+
+      http://varnish_ip
+
 
 -- Droplet Delete --
 
