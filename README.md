@@ -5,7 +5,7 @@ macOS: Sonoma 14.2.1
 
 Centos: centos-7-x64
 
-Compared to Geerlingguy files i have decided to create a script that writes ip's and assign them to groups. Unfortunately it leads to additional command to execute. (Since I wasn't able to get hosts to inventory groups like in)
+Compared to Geerlingguy files i have decided to create a script that writes ip's and assign them to groups. Unfortunately it leads to additional commands to execute. (Since I wasn't able to get hosts to inventory groups like in)
 
 -- INSTRUCTIONS --
 
