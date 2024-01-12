@@ -1,5 +1,7 @@
 # DigitalOcean Highly Available Infrastructure Centos-7 
 
+## Specifications
+
 macOS: Sonoma 14.2.1
 
 Centos: centos-7-x64
