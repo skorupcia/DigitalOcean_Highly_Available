@@ -1,4 +1,4 @@
-# DigitalOcean Highly Available Infrastructure with Centos-7 
+# DigitalOcean Highly Available Infrastructure Centos-7 
 
 macOS: Sonoma 14.2.1
 
