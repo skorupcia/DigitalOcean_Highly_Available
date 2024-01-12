@@ -26,21 +26,17 @@ Compared to Geerlingguy files i have decided to create a script that writes ip's
 
       ansible-galaxy install -r requirements.yml
    
-2. Run digitalocean.yml to create droplets:
+2. Run digitalocean.yml to create droplets and run generate_hosts.py:
 
       ansible-playbook provisioners/digitalocean.yml
 
-3. Run generate_hosts.py to create an inventory with ours server ip's and groups:
-
-      python3 generate_hosts.py
-
-4. Run playbooks with provision.yml file:
+3. Run playbooks with provision.yml file:
 
       ansible-playbook -i hosts.ini provision.yml
 
-5. Check if infrastructure is working simply connecting to varnish ip server:
+4. Check if infrastructure is working simply connecting to varnish ip server:
 
-      http://varnish_ip
+      http://your_varnish_ip
 
 
 ## Droplet Delete
