@@ -31,12 +31,6 @@
         unique_name: yes
       register: created_droplets
       with_items: "{{ droplets }}"
-
-- hosts: do
-  remote_user: root
-  gather_facts: false
-
-  tasks:
-    - name: Debug information
-      debug:
-        var: droplets_response
+      
+    - name: Run generate_hosts.py
+      command: python3 YOUR_PATH/generate_hosts.py
