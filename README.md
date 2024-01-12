@@ -20,6 +20,8 @@ Compared to Geerlingguy files i have decided to create a script that writes ip's
 
    c) Update 'api_token' in the end of the generate_hosts.py script
 
+   d) Update file location of 'generate_hosts.py' in provisioners/digitalocean.yml
+
 ## RUN INSTRUCTIONS
 
 1. Run required roles:
