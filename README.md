@@ -1,5 +1,4 @@
-# DigitalOcean Highly Available Infrastructure
-DigitalOcean Highly Available Infrastructure with Centos-7 
+# DigitalOcean Highly Available Infrastructure with Centos-7 
 
 macOS: Sonoma 14.2.1
 
@@ -7,7 +6,7 @@ Centos: centos-7-x64
 
 Compared to Geerlingguy files i have decided to create a script that writes ip's and assign them to groups. Unfortunately it leads to additional commands to execute. (Since I wasn't able to get hosts to inventory groups like in)
 
--- INSTRUCTIONS --
+## INSTRUCTIONS
 
 1. Add your machine SSH to DigitalOcean account
 
@@ -21,7 +20,7 @@ Compared to Geerlingguy files i have decided to create a script that writes ip's
 
    c) Update 'api_token' in the end of the generate_hosts.py script
 
--- RUN INSTRUCTIONS --
+## RUN INSTRUCTIONS
 
 1. Run required roles:
 
@@ -44,17 +43,17 @@ Compared to Geerlingguy files i have decided to create a script that writes ip's
       http://varnish_ip
 
 
--- Droplet Delete --
+## Droplet Delete
 
    If you would like to delete droplets, simply switch state of "Probision Digitalocean droplest" from PRESENT to ABSENT and run playbook.
 
--- TroubleShooting --
+## TroubleShooting
 
 1. MacOS - INSTALL CERTIFICATES if your Geerlingguy roles end up with certificate error:
    
     Unknown error when attempting to call Galaxy at 'https://galaxy.ansible.com/api/': <urlopen error [SSL:CERTIFICATE_VERIFY_FAILED]
 
--- Links -- 
+## Links 
 
    https://github.com/geerlingguy/ansible-for-devops/tree/master/lamp-infrastructure
 
