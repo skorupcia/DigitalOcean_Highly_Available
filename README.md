@@ -45,7 +45,7 @@ Compared to Geerlingguy files i have decided to create a script that writes ip's
 
 ## Droplet Delete
 
-   If you would like to delete droplets, simply switch state of "Probision Digitalocean droplest" from PRESENT to ABSENT and run playbook.
+   If you would like to delete droplets, simply switch state of "Provision Digitalocean droplets" from PRESENT to ABSENT and run playbook.
 
 ## TroubleShooting
 
