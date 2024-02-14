@@ -26,5 +26,5 @@ jobs:
         python -m pip install --upgrade pip
         pip install ansible
 
-    - name: Run Ansible playbook
-      run: ansible-playbook provisioners/digitalocean.yml
+    - name: Lint Ansible playbook
+      run: ansible-lint provision.yml
