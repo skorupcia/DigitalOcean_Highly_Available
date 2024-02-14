@@ -1,4 +1,5 @@
 ---
+- name: Play for creating droplets
 - hosts: localhost
   connection: local
 
@@ -33,4 +34,4 @@
       with_items: "{{ droplets }}"
       
     - name: Run generate_hosts.py
-      ansible.builtin.command: python3 generate_hosts.py
+      ansible.builtin.command: python3 YOUR_PATH/generate_hosts.py
