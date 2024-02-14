@@ -27,4 +27,4 @@ jobs:
         pip install ansible
 
     - name: Run Ansible playbook
-      run: ansible-playbook -i hosts.ini provision.yml
+      run: ansible-playbook provisioners/digitalocean.yml
