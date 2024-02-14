@@ -28,4 +28,4 @@ jobs:
         pip install ansible ansible-lint
 
     - name: Lint Ansible playbook
-      run: ansible-lint provision.yml
+      run: ansible-lint provisioners/digitalocean.yml
