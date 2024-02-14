@@ -4,10 +4,8 @@
   connection: local
 
   vars:
-    # Connection vars 
     u_token: YOUR_API_TOKEN
     u_ssh: YOUR_SSH
-    # Droplets vars
     droplets:
       - { name: a4d.lamp.varnish, group: "lamp_varnish" }
       - { name: a4d.lamp.www.1, group: "lamp_www" }
