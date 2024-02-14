@@ -24,7 +24,6 @@
         size: "{{ item.size | default('s-1vcpu-512mb-10gb') }}"
         image: "{{ item.image | default('centos-7-x64') }}"
         region: "{{ item.region | default('fra1') }}"
-        # Customize this default for your account.
         ssh_keys:
           - "{{ u_ssh }}"
         unique_name: true
