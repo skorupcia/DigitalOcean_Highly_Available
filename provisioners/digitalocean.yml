@@ -3,7 +3,7 @@
   connection: local
 
   vars:
-    # connection vars 
+    # Connection vars 
     u_token: YOUR_API_TOKEN
     u_ssh: YOUR_SSH
     # Droplets vars
@@ -17,20 +17,20 @@
 
   tasks:
     - name: Provision DigitalOcean droplets.
-      digital_ocean_droplet:
+      community.digitalocean.digital_ocean_droplet:
         state: "{{ item.state | default('present') }}"
         name: "{{ item.name }}"
         oauth_token: "{{ u_token }}"
-        private_networking: yes
+        private_networking: true
         size: "{{ item.size | default('s-1vcpu-512mb-10gb') }}"
         image: "{{ item.image | default('centos-7-x64') }}"
         region: "{{ item.region | default('fra1') }}"
         # Customize this default for your account.
         ssh_keys:
           - "{{ u_ssh }}"
-        unique_name: yes
+        unique_name: true
       register: created_droplets
       with_items: "{{ droplets }}"
       
     - name: Run generate_hosts.py
-      command: python3 YOUR_PATH/generate_hosts.py
+      ansible.builtin.command: python3 YOUR_PATH/generate_hosts.py
