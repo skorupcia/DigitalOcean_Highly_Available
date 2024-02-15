@@ -28,9 +28,9 @@ jobs:
         pip install ansible ansible-lint
 
     - name: Lint Ansible playbook
-      run: ansible-lint 
-        - provisioners/digitalocean.yml
-        - playbooks/db/main.yml
-        - playbooks/memcached/main.yml
-        - playbooks/varnish/main.yml
-        - playbooks/www/main.yml
+      run: |
+        - ansible-lint provisioners/digitalocean.yml
+        - ansible-lint playbooks/db/main.yml
+        - ansible-lint playbooks/memcached/main.yml
+        - ansible-lint playbooks/varnish/main.yml
+        - ansible-lint playbooks/www/main.yml
