@@ -1,7 +1,7 @@
 ---
+- name: Memecached playbook installation
 - hosts: lamp_memcached
-  become: yes
-
+  become: true
   vars_files:
     - vars.yml
 
