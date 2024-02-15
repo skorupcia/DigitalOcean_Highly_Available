@@ -1,6 +1,7 @@
 ---
+- name: Lamp install
 - hosts: lamp_varnish
-  become: yes
+  become: true
 
   vars_files:
     - vars.yml
@@ -11,7 +12,7 @@
     - geerlingguy.varnish
 
   tasks:
-    - name: Copy Varnish default.vcl.
+    - name: Copy Varnish default.vcl
       template:
         src: "templates/default.vcl.j2"
         dest: "/etc/varnish/default.vcl"
