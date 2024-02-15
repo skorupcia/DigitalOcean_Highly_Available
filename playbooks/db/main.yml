@@ -1,7 +1,7 @@
 ---
+- name: Database installation
 - hosts: lamp_db
   connection: local
-  
   vars_files:
     - vars.yml
 
