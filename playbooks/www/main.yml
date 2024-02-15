@@ -1,6 +1,7 @@
 ---
+- name: Website config
 - hosts: lamp_www
-  become: yes
+  become: true
 
   vars_files:
     - vars.yml
