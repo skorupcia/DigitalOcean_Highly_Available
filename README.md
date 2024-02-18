@@ -1,5 +1,7 @@
 # DigitalOcean Highly Available Infrastructure Centos-7 
 
+[![CI](https://github.com/skorupcia/DigitalOcean_Highly_Available/actions/workflows/ci.yml/badge.svg)](https://github.com/skorupcia/DigitalOcean_Highly_Available/actions/workflows/ci.yml)
+
 ## Specifications
 
 macOS: Sonoma 14.2.1
