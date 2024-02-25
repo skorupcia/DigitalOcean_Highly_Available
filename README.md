@@ -8,7 +8,7 @@ macOS: Sonoma 14.2.1
 
 Centos: centos-7-x64
 
-Compared to Geerlingguy files i have decided to create a script that writes ip's and assign them to groups. Unfortunately it leads to additional commands to execute. (Since I wasn't able to get hosts to inventory groups like in)
+Compared to Geerlingguy files i have decided to create a script that writes ip's and assign them to groups. Unfortunately it leads to additional commands to execute. (Since I wasn't able to get hosts to inventory groups)
 
 ## INSTRUCTIONS
 
@@ -18,9 +18,9 @@ Compared to Geerlingguy files i have decided to create a script that writes ip's
 
 3. Update vars files to your personal preferences
 
-   a) Update u_token in Connection vars (api_token)
+   a) Update u_token in keys.yml (api_token)
    
-   b) Update u_ssh in Connection vars (ssh fingerprint)
+   b) Update u_ssh in keys.yml (ssh fingerprint)
 
    c) Update 'api_token' in the end of the generate_hosts.py script
 
@@ -36,13 +36,21 @@ Compared to Geerlingguy files i have decided to create a script that writes ip's
 
       ansible-playbook provisioners/digitalocean.yml
 
-3. Run playbooks with provision.yml file:
+      #### When vault password applied:
+
+      ansible-playbook provisioners/digitalocean.yml --ask-vault-pass
+
+4. Run playbooks with provision.yml file:
 
       ansible-playbook -i hosts.ini provision.yml
 
-4. Check if infrastructure is working simply connecting to varnish ip server:
+5. Check if infrastructure is working simply connecting to varnish ip server:
 
       http://your_varnish_ip
+
+6. For additional safety of your ssh and api key run:
+
+      ansible-vault encrypt provisioners/keys.yml 
 
 
 ## Droplet Delete
